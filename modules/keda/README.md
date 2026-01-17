@@ -27,7 +27,7 @@ Terraform module to deploy KEDA (Kubernetes Event Driven Autoscaling) on your Ku
 
 ```hcl
 module "keda" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/keda?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/keda?ref=v1.0.0"
 
   kubeconfig_path = "~/.kube/config"
   release_name    = "kedacore"
@@ -40,7 +40,7 @@ module "keda" {
 
 ```hcl
 module "keda" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/keda?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/keda?ref=main"
 
   deploy_example = false
 }
@@ -50,7 +50,7 @@ module "keda" {
 
 ```hcl
 module "keda" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/keda?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/keda?ref=main"
 
   namespace      = "custom-keda"
   manifest_path  = "${path.module}/custom-keda-manifest.yaml"

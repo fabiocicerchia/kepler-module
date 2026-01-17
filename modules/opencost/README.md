@@ -27,7 +27,7 @@ Terraform module to deploy OpenCost on your Kubernetes cluster for cost monitori
 
 ```hcl
 module "opencost" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/opencost?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/opencost?ref=main"
 
   kubeconfig_path = "~/.kube/config"
   release_name    = "opencost-charts"
@@ -40,7 +40,7 @@ module "opencost" {
 
 ```hcl
 module "opencost" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/opencost?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/opencost?ref=main"
 
   namespace = "cost-monitoring"
   values = {

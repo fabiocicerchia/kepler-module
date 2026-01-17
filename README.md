@@ -420,7 +420,7 @@ kubectl port-forward -n monitoring svc/prometheus-kube-prometheus-prometheus 909
 
 ## Contributing
 
-Contributions are welcome! Please submit pull requests to the [GitHub repository](https://github.com/fabiocicerchia/kepler-module).
+Contributions are welcome! Please submit pull requests to the [GitHub repository](https://github.com/fabiocicerchia/tf-k8s-greenops-module).
 
 ## License
 

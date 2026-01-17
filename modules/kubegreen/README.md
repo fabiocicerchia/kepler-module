@@ -28,7 +28,7 @@ Terraform module to deploy KubeGreen on your Kubernetes cluster for automated re
 
 ```hcl
 module "kubegreen" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/kubegreen?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/kubegreen?ref=main"
 
   kubeconfig_path = "~/.kube/config"
   release_name    = "kube-green"
@@ -41,7 +41,7 @@ module "kubegreen" {
 
 ```hcl
 module "kubegreen" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/kubegreen?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/kubegreen?ref=main"
 
   namespace = "kube-system"
   values = {

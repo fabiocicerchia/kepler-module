@@ -30,7 +30,7 @@ Terraform module to deploy Scaphandre on your Kubernetes cluster for power consu
 
 ```hcl
 module "scaphandre" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/scaphandre?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/scaphandre?ref=main"
 
   kubeconfig_path = "~/.kube/config"
   release_name    = "scaphandre"
@@ -43,7 +43,7 @@ module "scaphandre" {
 
 ```hcl
 module "scaphandre" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/scaphandre?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/scaphandre?ref=main"
 
   namespace = "monitoring"
   values = {

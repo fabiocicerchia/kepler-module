@@ -27,7 +27,7 @@ Terraform module to deploy the Prometheus monitoring stack on Kubernetes using H
 
 ```hcl
 module "prometheus" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/prometheus?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/prometheus?ref=main"
 
   kubeconfig_path = "~/.kube/config"
   release_name    = "prometheus-community"
@@ -40,7 +40,7 @@ module "prometheus" {
 
 ```hcl
 module "prometheus" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/prometheus?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/prometheus?ref=main"
 
   kubeconfig_path = "~/.kube/config"
   namespace       = "custom-monitoring"

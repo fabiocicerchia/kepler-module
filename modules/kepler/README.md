@@ -29,7 +29,7 @@ Terraform module to deploy the Kepler Operator on your Kubernetes cluster for mo
 
 ```hcl
 module "kepler" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/kepler?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/kepler?ref=main"
 
   kubeconfig_path = "~/.kube/config"
   release_name    = "kepler-operator"
@@ -42,7 +42,7 @@ module "kepler" {
 
 ```hcl
 module "kepler" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/kepler?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/kepler?ref=main"
 
   deploy_powermonitor = false
 }
@@ -52,7 +52,7 @@ module "kepler" {
 
 ```hcl
 module "kepler" {
-  source = "https://github.com/fabiocicerchia/kepler-module.git//modules/kepler?ref=main"
+  source = "https://github.com/fabiocicerchia/tf-k8s-greenops-module.git//modules/kepler?ref=main"
 
   namespace = "custom-kepler"
   values = {
