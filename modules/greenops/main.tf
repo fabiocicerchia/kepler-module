@@ -6,6 +6,7 @@ module "prometheus" {
   release_name    = var.prometheus.release_name
   namespace       = var.prometheus.namespace
   values          = var.prometheus.values
+  chart_version   = var.prometheus.chart_version
 }
 
 module "keda" {
@@ -18,6 +19,7 @@ module "keda" {
   values          = var.keda.values
   deploy_example  = var.keda.deploy_example
   manifest_path   = var.keda.manifest_path
+  chart_version   = var.keda.chart_version
 }
 
 module "opencost" {
@@ -27,6 +29,7 @@ module "opencost" {
   kubeconfig_path = var.kubeconfig_path
   release_name    = var.opencost.release_name
   namespace       = var.opencost.namespace
+  chart_version   = var.opencost.chart_version
   values          = var.opencost.values
 }
 
@@ -38,6 +41,7 @@ module "kepler" {
   release_name        = var.kepler.release_name
   namespace           = var.kepler.namespace
   values              = var.kepler.values
+  chart_version       = var.kepler.chart_version
   deploy_powermonitor = var.kepler.deploy_powermonitor
 }
 
@@ -48,6 +52,7 @@ module "scaphandre" {
   kubeconfig_path = var.kubeconfig_path
   release_name    = var.scaphandre.release_name
   namespace       = var.scaphandre.namespace
+  chart_version   = var.scaphandre.chart_version
   values          = var.scaphandre.values
 }
 
@@ -57,6 +62,7 @@ module "kubegreen" {
 
   kubeconfig_path = var.kubeconfig_path
   release_name    = var.kubegreen.release_name
+  chart_version   = var.kubegreen.chart_version
   namespace       = var.kubegreen.namespace
   values          = var.kubegreen.values
 }

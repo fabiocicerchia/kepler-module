@@ -8,6 +8,7 @@ resource "helm_release" "keda" {
   name       = var.release_name
   repository = "https://kedacore.github.io/charts"
   chart      = "kedacore/keda"
+  version    = var.chart_version != "" ? var.chart_version : null
 
   create_namespace = true
   namespace        = var.namespace

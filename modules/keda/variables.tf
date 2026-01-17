@@ -33,3 +33,9 @@ variable "manifest_path" {
   type        = string
   default     = "keda.yaml"
 }
+
+variable "chart_version" {
+  description = "KEDA Helm chart version (empty string for latest)"
+  type        = string
+  default     = ""
+}

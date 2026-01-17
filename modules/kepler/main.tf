@@ -16,6 +16,7 @@ resource "helm_release" "kepler_operator" {
   name       = var.release_name
   repository = "oci://quay.io/sustainable_computing_io/charts/kepler-operator"
   chart      = "prometheus-community/kube-prometheus-stack"
+  version    = var.chart_version != "" ? var.chart_version : null
 
   create_namespace = true
   namespace        = var.namespace

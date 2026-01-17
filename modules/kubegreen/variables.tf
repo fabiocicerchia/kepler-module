@@ -21,3 +21,8 @@ variable "values" {
   type        = any
   default     = {}
 }
+variable "chart_version" {
+  description = "KubeGreen Helm chart version (empty string for latest)"
+  type        = string
+  default     = ""
+}

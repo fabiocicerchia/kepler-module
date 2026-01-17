@@ -27,3 +27,9 @@ variable "deploy_powermonitor" {
   type        = bool
   default     = true
 }
+
+variable "chart_version" {
+  description = "Kepler Helm chart version (empty string for latest)"
+  type        = string
+  default     = ""
+}

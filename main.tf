@@ -4,10 +4,11 @@ module "greenops" {
   kubeconfig_path = var.kubeconfig_path
 
   prometheus = {
-    enabled      = var.prometheus.enabled
-    release_name = var.prometheus.release_name
-    namespace    = var.prometheus.namespace
-    values       = var.prometheus.values
+    enabled       = var.prometheus.enabled
+    release_name  = var.prometheus.release_name
+    namespace     = var.prometheus.namespace
+    values        = var.prometheus.values
+    chart_version = var.prometheus.chart_version
   }
 
   keda = {
@@ -17,13 +18,15 @@ module "greenops" {
     values         = {}
     deploy_example = var.keda.deploy_example
     manifest_path  = var.keda.manifest_path
+    chart_version  = var.keda.chart_version
   }
 
   opencost = {
-    enabled      = var.opencost.enabled
-    release_name = var.opencost.release_name
-    namespace    = var.opencost.namespace
-    values       = var.opencost.values
+    enabled       = var.opencost.enabled
+    release_name  = var.opencost.release_name
+    namespace     = var.opencost.namespace
+    values        = var.opencost.values
+    chart_version = var.opencost.chart_version
   }
 
   kepler = {
@@ -32,20 +35,23 @@ module "greenops" {
     namespace           = var.kepler.namespace
     values              = var.kepler.values
     deploy_powermonitor = var.kepler.deploy_powermonitor
+    chart_version       = var.kepler.chart_version
   }
 
   scaphandre = {
-    enabled      = var.scaphandre.enabled
-    release_name = var.scaphandre.release_name
-    namespace    = var.scaphandre.namespace
-    values       = var.scaphandre.values
+    enabled       = var.scaphandre.enabled
+    release_name  = var.scaphandre.release_name
+    namespace     = var.scaphandre.namespace
+    values        = var.scaphandre.values
+    chart_version = var.scaphandre.chart_version
   }
 
   kubegreen = {
-    enabled      = var.kubegreen.enabled
-    release_name = var.kubegreen.release_name
-    namespace    = var.kubegreen.namespace
-    values       = var.kubegreen.values
+    enabled       = var.kubegreen.enabled
+    release_name  = var.kubegreen.release_name
+    namespace     = var.kubegreen.namespace
+    values        = var.kubegreen.values
+    chart_version = var.kubegreen.chart_version
   }
 }
 

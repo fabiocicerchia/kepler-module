@@ -21,3 +21,8 @@ variable "values" {
   type        = any
   default     = {}
 }
+variable "chart_version" {
+  description = "OpenCost Helm chart version (empty string for latest)"
+  type        = string
+  default     = ""
+}

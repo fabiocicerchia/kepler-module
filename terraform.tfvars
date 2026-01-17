@@ -2,9 +2,10 @@ kubeconfig_path = "~/.kube/config"
 deploy_demo_app = true
 
 prometheus = {
-  enabled      = true
-  release_name = "prometheus-community"
-  namespace    = "monitoring"
+  enabled       = true
+  release_name  = "prometheus-community"
+  namespace     = "monitoring"
+  chart_version = ""
   # https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/values.yaml
   values = {
     prometheus = {
@@ -19,15 +20,17 @@ keda = {
   enabled        = true
   release_name   = "kedacore"
   namespace      = "keda"
+  chart_version  = ""
   deploy_example = true
   manifest_path  = "keda.yaml"
   values         = {}
 }
 
 opencost = {
-  enabled      = true
-  release_name = "opencost-charts"
-  namespace    = "opencost"
+  enabled       = true
+  release_name  = "opencost-charts"
+  chart_version = ""
+  namespace     = "opencost"
   # https://github.com/opencost/opencost-helm-chart/blob/main/charts/opencost/values.yaml
   values = {
     opencost = {
@@ -48,6 +51,7 @@ opencost = {
 kepler = {
   enabled             = true
   release_name        = "kepler-operator"
+  chart_version       = ""
   namespace           = "kepler-operator"
   deploy_powermonitor = true
   # https://github.com/sustainable-computing-io/kepler/blob/main/manifests/helm/kepler/values.yaml
@@ -60,17 +64,19 @@ kepler = {
 }
 
 scaphandre = {
-  enabled      = false
-  release_name = "scaphandre"
-  namespace    = "scaphandre"
+  enabled       = false
+  release_name  = "scaphandre"
+  chart_version = ""
+  namespace     = "scaphandre"
   # https://github.com/hubblo-org/scaphandre
   values = {}
 }
 
 kubegreen = {
-  enabled      = false
-  release_name = "kube-green"
-  namespace    = "kube-green"
+  enabled       = false
+  chart_version = ""
+  release_name  = "kube-green"
+  namespace     = "kube-green"
   # https://github.com/kube-green/kube-green
   # https://kube-green.github.io/
   values = {}
