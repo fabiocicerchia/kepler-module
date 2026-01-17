@@ -1,12 +1,42 @@
-output "greenops" {
-  description = "GreenOps module outputs"
+output "prometheus" {
+  description = "Prometheus module outputs"
   value = {
-    prometheus          = module.greenops.prometheus
-    keda                = module.greenops.keda
-    opencost            = module.greenops.opencost
-    kepler              = module.greenops.kepler
-    deployed_components = module.greenops.deployed_components
+    namespace    = module.greenops.prometheus.namespace
+    release_name = module.greenops.prometheus.release_name
+    version      = module.greenops.prometheus.version
   }
+}
+
+output "keda" {
+  description = "KEDA module outputs"
+  value = {
+    namespace    = module.greenops.keda.namespace
+    release_name = module.greenops.keda.release_name
+    version      = module.greenops.keda.version
+  }
+}
+
+output "opencost" {
+  description = "OpenCost module outputs"
+  value = {
+    namespace    = module.greenops.opencost.namespace
+    release_name = module.greenops.opencost.release_name
+    version      = module.greenops.opencost.version
+  }
+}
+
+output "kepler" {
+  description = "Kepler module outputs"
+  value = {
+    namespace    = module.greenops.kepler.namespace
+    release_name = module.greenops.kepler.release_name
+    version      = module.greenops.kepler.version
+  }
+}
+
+output "deployed_components" {
+  description = "Map of deployed components and their status"
+  value       = module.greenops.deployed_components
 }
 
 output "demo_app_deployed" {

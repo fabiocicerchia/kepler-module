@@ -165,20 +165,58 @@ kepler = {
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| prometheus_namespace | Prometheus Kubernetes namespace (if enabled) |
-| prometheus_release_name | Prometheus Helm release name (if enabled) |
-| prometheus_chart_version | Prometheus chart version (if enabled) |
-| keda_namespace | KEDA Kubernetes namespace (if enabled) |
-| keda_release_name | KEDA Helm release name (if enabled) |
-| keda_chart_version | KEDA chart version (if enabled) |
-| opencost_namespace | OpenCost Kubernetes namespace (if enabled) |
-| opencost_release_name | OpenCost Helm release name (if enabled) |
-| opencost_chart_version | OpenCost chart version (if enabled) |
-| kepler_namespace | Kepler Kubernetes namespace (if enabled) |
-| kepler_release_name | Kepler Helm release name (if enabled) |
-| kepler_chart_version | Kepler chart version (if enabled) |
+The module provides outputs organized in nested objects for better structure:
+
+### prometheus
+Prometheus module outputs (if enabled):
+```hcl
+prometheus = {
+  namespace    = string  # Kubernetes namespace where Prometheus is deployed
+  release_name = string  # Helm release name of Prometheus
+  version      = string  # Chart version deployed
+}
+```
+
+### keda
+KEDA module outputs (if enabled):
+```hcl
+keda = {
+  namespace    = string  # Kubernetes namespace where KEDA is deployed
+  release_name = string  # Helm release name of KEDA
+  version      = string  # Chart version deployed
+}
+```
+
+### opencost
+OpenCost module outputs (if enabled):
+```hcl
+opencost = {
+  namespace    = string  # Kubernetes namespace where OpenCost is deployed
+  release_name = string  # Helm release name of OpenCost
+  version      = string  # Chart version deployed
+}
+```
+
+### kepler
+Kepler module outputs (if enabled):
+```hcl
+kepler = {
+  namespace    = string  # Kubernetes namespace where Kepler is deployed
+  release_name = string  # Helm release name of Kepler
+  version      = string  # Chart version deployed
+}
+```
+
+### deployed_components
+Map showing which components are enabled:
+```hcl
+deployed_components = {
+  prometheus = bool  # true if Prometheus is enabled
+  keda       = bool  # true if KEDA is enabled
+  opencost   = bool  # true if OpenCost is enabled
+  kepler     = bool  # true if Kepler is enabled
+}
+```
 
 ## Architecture
 

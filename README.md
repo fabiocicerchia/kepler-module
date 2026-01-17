@@ -172,18 +172,65 @@ kepler = {
 
 ## Outputs
 
-The module provides outputs for each deployed component:
+The module provides outputs organized in nested objects:
 
-- `prometheus_namespace` - Prometheus namespace
-- `prometheus_release_name` - Prometheus Helm release name
-- `prometheus_chart_version` - Prometheus chart version
-- `keda_namespace` - KEDA namespace (if enabled)
-- `keda_release_name` - KEDA Helm release name (if enabled)
-- `opencost_namespace` - OpenCost namespace (if enabled)
-- `opencost_release_name` - OpenCost Helm release name (if enabled)
-- `kepler_namespace` - Kepler namespace (if enabled)
-- `kepler_release_name` - Kepler Helm release name (if enabled)
-- `demo_app_deployed` - Whether demo app was deployed
+### prometheus
+Prometheus deployment information (if enabled):
+```hcl
+prometheus = {
+  namespace    = string  # Kubernetes namespace
+  release_name = string  # Helm release name
+  version      = string  # Chart version
+}
+```
+Access via: `module.greenops.prometheus.namespace`
+
+### keda
+KEDA deployment information (if enabled):
+```hcl
+keda = {
+  namespace    = string  # Kubernetes namespace
+  release_name = string  # Helm release name
+  version      = string  # Chart version
+}
+```
+Access via: `module.greenops.keda.namespace`
+
+### opencost
+OpenCost deployment information (if enabled):
+```hcl
+opencost = {
+  namespace    = string  # Kubernetes namespace
+  release_name = string  # Helm release name
+  version      = string  # Chart version
+}
+```
+Access via: `module.greenops.opencost.namespace`
+
+### kepler
+Kepler deployment information (if enabled):
+```hcl
+kepler = {
+  namespace    = string  # Kubernetes namespace
+  release_name = string  # Helm release name
+  version      = string  # Chart version
+}
+```
+Access via: `module.greenops.kepler.namespace`
+
+### deployed_components
+Status of all deployed components:
+```hcl
+deployed_components = {
+  prometheus = bool  # Deployment status
+  keda       = bool  # Deployment status
+  opencost   = bool  # Deployment status
+  kepler     = bool  # Deployment status
+}
+```
+
+### demo_app_deployed
+Boolean indicating if the demo application was deployed
 
 ## Grafana Dashboards
 
