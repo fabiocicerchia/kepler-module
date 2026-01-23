@@ -52,14 +52,36 @@ output "kubegreen" {
   } : null
 }
 
+output "carbon_intensity_exporter" {
+  description = "Carbon Intensity Exporter module outputs"
+  value = var.carbon_intensity_exporter.enabled ? {
+    namespace    = module.carbon_intensity_exporter[0].namespace
+    release_name = module.carbon_intensity_exporter[0].release_name
+    version      = module.carbon_intensity_exporter[0].chart_version
+  } : null
+}
+
+output "cloudcarbonfootprint" {
+  description = "Cloud Carbon Footprint module outputs"
+  value = var.cloudcarbonfootprint.enabled ? {
+    namespace          = module.cloudcarbonfootprint[0].namespace
+    release_name       = module.cloudcarbonfootprint[0].release_name
+    version            = module.cloudcarbonfootprint[0].chart_version
+    client_service_url = module.cloudcarbonfootprint[0].client_service_url
+    api_service_url    = module.cloudcarbonfootprint[0].api_service_url
+  } : null
+}
+
 output "deployed_components" {
   description = "List of deployed components"
   value = {
-    prometheus = var.prometheus.enabled
-    keda       = var.keda.enabled
-    opencost   = var.opencost.enabled
-    kepler     = var.kepler.enabled
-    scaphandre = var.scaphandre.enabled
-    kubegreen  = var.kubegreen.enabled
+    prometheus                = var.prometheus.enabled
+    keda                      = var.keda.enabled
+    opencost                  = var.opencost.enabled
+    kepler                    = var.kepler.enabled
+    scaphandre                = var.scaphandre.enabled
+    kubegreen                 = var.kubegreen.enabled
+    carbon_intensity_exporter = var.carbon_intensity_exporter.enabled
+    cloudcarbonfootprint      = var.cloudcarbonfootprint.enabled
   }
 }
