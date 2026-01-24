@@ -6,10 +6,10 @@ module "prometheus" {
     helm = helm
   }
 
-  release_name    = var.prometheus.release_name
-  namespace       = var.prometheus.namespace
-  values          = var.prometheus.values
-  chart_version   = var.prometheus.chart_version
+  release_name  = var.prometheus.release_name
+  namespace     = var.prometheus.namespace
+  values        = var.prometheus.values
+  chart_version = var.prometheus.chart_version
 }
 
 module "keda" {
@@ -20,12 +20,12 @@ module "keda" {
     helm = helm
   }
 
-  release_name    = var.keda.release_name
-  namespace       = var.keda.namespace
-  values          = var.keda.values
-  deploy_example  = var.keda.deploy_example
-  manifest_path   = var.keda.manifest_path
-  chart_version   = var.keda.chart_version
+  release_name   = var.keda.release_name
+  namespace      = var.keda.namespace
+  values         = var.keda.values
+  deploy_example = var.keda.deploy_example
+  manifest_path  = var.keda.manifest_path
+  chart_version  = var.keda.chart_version
 }
 
 module "opencost" {
@@ -36,10 +36,10 @@ module "opencost" {
     helm = helm
   }
 
-  release_name    = var.opencost.release_name
-  namespace       = var.opencost.namespace
-  chart_version   = var.opencost.chart_version
-  values          = var.opencost.values
+  release_name  = var.opencost.release_name
+  namespace     = var.opencost.namespace
+  chart_version = var.opencost.chart_version
+  values        = var.opencost.values
 }
 
 module "kepler" {
@@ -65,10 +65,10 @@ module "scaphandre" {
     helm = helm
   }
 
-  release_name    = var.scaphandre.release_name
-  namespace       = var.scaphandre.namespace
-  chart_version   = var.scaphandre.chart_version
-  values          = var.scaphandre.values
+  release_name  = var.scaphandre.release_name
+  namespace     = var.scaphandre.namespace
+  chart_version = var.scaphandre.chart_version
+  values        = var.scaphandre.values
 }
 
 module "kubegreen" {
@@ -79,10 +79,10 @@ module "kubegreen" {
     helm = helm
   }
 
-  release_name    = var.kubegreen.release_name
-  chart_version   = var.kubegreen.chart_version
-  namespace       = var.kubegreen.namespace
-  values          = var.kubegreen.values
+  release_name  = var.kubegreen.release_name
+  chart_version = var.kubegreen.chart_version
+  namespace     = var.kubegreen.namespace
+  values        = var.kubegreen.values
 }
 
 module "carbon_intensity_exporter" {
@@ -93,10 +93,10 @@ module "carbon_intensity_exporter" {
     helm = helm
   }
 
-  release_name    = var.carbon_intensity_exporter.release_name
-  namespace       = var.carbon_intensity_exporter.namespace
-  chart_version   = var.carbon_intensity_exporter.chart_version
-  values          = var.carbon_intensity_exporter.values
+  release_name  = var.carbon_intensity_exporter.release_name
+  namespace     = var.carbon_intensity_exporter.namespace
+  chart_version = var.carbon_intensity_exporter.chart_version
+  values        = var.carbon_intensity_exporter.values
 }
 
 module "cloud_carbon_footprint" {
@@ -107,8 +107,8 @@ module "cloud_carbon_footprint" {
     helm = helm
   }
 
-  release_name    = var.cloud_carbon_footprint.release_name
-  namespace       = var.cloud_carbon_footprint.namespace
-  chart_version   = var.cloud_carbon_footprint.chart_version
-  values          = var.cloud_carbon_footprint.values
+  release_name  = var.cloud_carbon_footprint.release_name
+  namespace     = var.cloud_carbon_footprint.namespace
+  chart_version = var.cloud_carbon_footprint.chart_version
+  values        = var.cloud_carbon_footprint.values
 }

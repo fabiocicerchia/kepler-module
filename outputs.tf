@@ -82,6 +82,6 @@ output "deployed_components" {
     scaphandre                = var.scaphandre.enabled
     kubegreen                 = var.kubegreen.enabled
     carbon_intensity_exporter = var.carbon_intensity_exporter.enabled
-    cloud_carbon_footprint      = var.cloud_carbon_footprint.enabled
+    cloud_carbon_footprint    = var.cloud_carbon_footprint.enabled
   }
 }
