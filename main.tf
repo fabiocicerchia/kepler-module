@@ -1,6 +1,6 @@
 module "prometheus" {
   count  = var.prometheus.enabled ? 1 : 0
-  source = "github.com/fabiocicerchia/terraform-helm-prometheus-stack/?ref=main"
+  source = "fabiocicerchia/prometheus-stack/helm"
 
   providers = {
     helm = helm
@@ -14,7 +14,7 @@ module "prometheus" {
 
 module "keda" {
   count  = var.keda.enabled ? 1 : 0
-  source = "github.com/fabiocicerchia/terraform-helm-keda/?ref=main"
+  source = "fabiocicerchia/keda/helm"
 
   providers = {
     helm = helm
@@ -30,7 +30,7 @@ module "keda" {
 
 module "opencost" {
   count  = var.opencost.enabled ? 1 : 0
-  source = "github.com/fabiocicerchia/terraform-helm-opencost/?ref=main"
+  source = "fabiocicerchia/opencost/helm"
 
   providers = {
     helm = helm
@@ -44,7 +44,7 @@ module "opencost" {
 
 module "kepler" {
   count  = var.kepler.enabled ? 1 : 0
-  source = "github.com/fabiocicerchia/terraform-helm-kepler/?ref=main"
+  source = "fabiocicerchia/kepler/helm"
 
   providers = {
     helm = helm
@@ -59,7 +59,7 @@ module "kepler" {
 
 module "scaphandre" {
   count  = var.scaphandre.enabled ? 1 : 0
-  source = "github.com/fabiocicerchia/terraform-helm-scaphandre/?ref=main"
+  source = "fabiocicerchia/scaphandre/helm"
 
   providers = {
     helm = helm
@@ -73,7 +73,7 @@ module "scaphandre" {
 
 module "kubegreen" {
   count  = var.kubegreen.enabled ? 1 : 0
-  source = "github.com/fabiocicerchia/terraform-helm-kubegreen/?ref=main"
+  source = "fabiocicerchia/kubegreen/helm"
 
   providers = {
     helm = helm
@@ -87,7 +87,7 @@ module "kubegreen" {
 
 module "carbon_intensity_exporter" {
   count  = var.carbon_intensity_exporter.enabled ? 1 : 0
-  source = "github.com/fabiocicerchia/terraform-helm-carbon-intensity-exporter/?ref=main"
+  source = "fabiocicerchia/carbon-intensity-exporter/helm"
 
   providers = {
     helm = helm
@@ -101,7 +101,7 @@ module "carbon_intensity_exporter" {
 
 module "cloud_carbon_footprint" {
   count  = var.cloud_carbon_footprint.enabled ? 1 : 0
-  source = "github.com/fabiocicerchia/terraform-helm-cloud-carbon-footprint/?ref=main"
+  source = "fabiocicerchia/cloud-carbon-footprint/helm"
 
   providers = {
     helm = helm
