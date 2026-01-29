@@ -6,6 +6,10 @@ terraform {
       source  = "hashicorp/helm"
       version = ">= 2.0"
     }
+    null = {
+      source  = "hashicorp/null"
+      version = ">= 3.0"
+    }
     kubectl = {
       source  = "gavinbunney/kubectl"
       version = ">= 1.14"
@@ -92,7 +96,6 @@ module "greenops" {
   energy_power = {
     kepler = {
       enabled             = true
-      deploy_powermonitor = true
       # https://github.com/sustainable-computing-io/kepler/blob/main/manifests/helm/kepler/values.yaml
       # https://github.com/sustainable-computing-io/kepler/blob/main/docs/user/configuration.md
       values = {
