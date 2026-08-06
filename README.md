@@ -112,7 +112,7 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 ## Requirements
 
 | Name | Version |
-|------|---------|  
+|------|---------|
 | terraform | >= 1.0 or OpenTofu >= 1.6 |
 | helm | >= 2.0 |
 | null | >= 3.0 |
@@ -160,12 +160,12 @@ provider "kubectl" {
 
 module "greenops" {
   source = "fabiocicerchia/greenops/kubernetes"
-  
+
   providers = {
     helm    = helm
     kubectl = kubectl
   }
-  
+
   kubectl_context = var.kubectl_context
 }
 ```

@@ -66,11 +66,11 @@ variable "energy_power" {
   description = "Energy and power monitoring tools - measure actual power consumption"
   type = object({
     kepler = optional(object({
-      enabled             = bool
-      release_name        = optional(string, "kepler-operator")
-      namespace           = optional(string, "kepler-operator")
-      values              = optional(any, {})
-      chart_version       = optional(string, "")
+      enabled       = bool
+      release_name  = optional(string, "kepler-operator")
+      namespace     = optional(string, "kepler-operator")
+      values        = optional(any, {})
+      chart_version = optional(string, "")
     }), { enabled = true }) # Enabled by default - core GreenOps observability
     scaphandre = optional(object({
       enabled       = bool

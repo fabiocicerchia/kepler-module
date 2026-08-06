@@ -1,5 +1,5 @@
 # Example KubeGreen SleepInfo Configuration
-# 
+#
 # This resource defines when pods should be suspended (sleep) and resumed (wake up).
 # Apply this AFTER deploying the GreenOps module with KubeGreen enabled.
 #
@@ -14,16 +14,16 @@ metadata:
 spec:
   # Suspend deployments at 8 PM
   sleepAt: "20:00"
-  
+
   # Resume deployments at 8 AM
   wakeUpAt: "08:00"
-  
+
   # Only on weekdays (Monday=1 to Friday=5)
   weekdays: "1-5"
-  
+
   # Timezone for the schedule
   timeZone: "UTC"
-  
+
   # Exclude critical services from suspension
   excludeRef:
     - apiVersion: apps/v1

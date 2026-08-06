@@ -7,7 +7,7 @@
 # What's new in Tier 2:
 # ✅ Carbon Intensity Exporter - Grid carbon intensity for your region
 # ✅ Cloud Carbon Footprint - Estimate cloud infrastructure carbon emissions
-# 
+#
 # Use cases:
 # - ESG reporting with measured carbon data
 # - Carbon-aware scheduling decisions
