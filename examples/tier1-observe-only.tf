@@ -50,7 +50,7 @@ variable "kubectl_context" {
 
 provider "helm" {
   kubernetes = {
-    config_path = "~/.kube/config"
+    config_path    = "~/.kube/config"
     config_context = var.kubectl_context
   }
 }
@@ -130,9 +130,9 @@ module "greenops_observe" {
 
 # ==============================================================================
 # After deployment, access your dashboards:
-# 
+#
 # kubectl port-forward -n monitoring svc/prometheus-community-grafana 3000:80
-# 
+#
 # Then browse to: http://localhost:3000
 # Default credentials: admin / prom-operator
 #

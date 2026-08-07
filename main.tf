@@ -50,10 +50,10 @@ module "kepler" {
     helm = helm
   }
 
-  release_name        = var.energy_power.kepler.release_name
-  namespace           = var.energy_power.kepler.namespace
-  values              = var.energy_power.kepler.values
-  chart_version       = var.energy_power.kepler.chart_version
+  release_name  = var.energy_power.kepler.release_name
+  namespace     = var.energy_power.kepler.namespace
+  values        = var.energy_power.kepler.values
+  chart_version = var.energy_power.kepler.chart_version
 }
 
 module "scaphandre" {
