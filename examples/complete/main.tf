@@ -144,8 +144,8 @@ module "greenops" {
       values = {
         providerName = "WattTime"
         wattTime = {
-          username = "username" # Replace with your actual username
-          password = "password" # Replace with your actual password
+          username = var.watt_time_username
+          password = var.watt_time_password
         }
       }
     }
@@ -187,4 +187,15 @@ resource "kubectl_manifest" "demo_app" {
   yaml_body = each.value
 
   depends_on = [module.greenops]
+}
+
+variable "watt_time_username" {
+  type        = string
+  description = "WattTime API username."
+}
+
+variable "watt_time_password" {
+  type        = string
+  description = "WattTime API password."
+  sensitive   = true
 }
