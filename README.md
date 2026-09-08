@@ -287,7 +287,7 @@ module "greenops" {
 ## Inputs
 
 | Name                        | Description                                                 | Type            | Default                | Required |
-| --------------------------- | ----------------------------------------------------------- | --------------- | ---------------------- | :------: |
+| --------------------------- | ----------------------------------------------------------- | --------------- | ---------------------- | -------- |
 | kubectl_config_path         | Path to kubectl config file                                 | `string`        | `"~/.kube/config"`     | no       |
 | kubectl_context             | Kubectl context to use for deployment                       | `string`        | `""` (current context) | no       |
 | observability               | Observability and scaling tools (Prometheus, KEDA)          | `object({...})` | `{}`                   | no       |
